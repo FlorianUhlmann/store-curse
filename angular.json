@@ -1,5 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false,
+    "defaultCollection": "@ngrx/schematics"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -7,10 +11,75 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "changeDetection": "OnPush",
+          "skipTests": true
         },
-        "@schematics/angular:application": {
-          "strict": true
+        "@schematics/angular:class": {
+          "skipTests": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@ngrx/schematics:component": {
+          "style": "scss",
+          "changeDetection": "OnPush"
+        },
+        "@ngrx/schematics:directive": {},
+        "@ngrx/schematics:pipe": {},
+        "@ngrx/schematics:service": {},
+        "@ngrx/schematics:module": {
+          "commonModule": false
+        },
+        "@ngrx/schematics:class": {
+          "skipTests": true
+        },
+        "@ngrx/schematics:store": {
+          "statePath": "store",
+          "stateInterface": "State"
+        },
+        "@ngrx/schematics:action": {
+          "creators": true,
+          "flat": false,
+          "api": true
+        },
+        "@ngrx/schematics:reducer": {
+          "creators": true,
+          "flat": false,
+          "api": true,
+          "spec": true
+        },
+        "@ngrx/schematics:effect": {
+          "creators": false,
+          "flat": false,
+          "api": true,
+          "spec": true
+        },
+        "@ngrx/schematics:entity": {
+          "creators": false,
+          "flat": false,
+          "spec": true
+        },
+        "@ngrx/schematics:feature": {
+          "creators": true,
+          "flat": false,
+          "api": true,
+          "spec": true
+        },
+        "@ngrx/schematics:container": {
+          "style": "scss",
+          "changeDetection": "OnPush",
+          "testDepth": "unit",
+          "skipTests": true
         }
       },
       "root": "",
