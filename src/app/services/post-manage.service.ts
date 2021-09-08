@@ -29,7 +29,10 @@ export class PostManageService {
       }),
       tap((posts: Post[]) => {
         this.store.dispatch(setPosts({ posts }));
-      })
+      }),
+      switchMap(
+        () => this.posts$
+      )
     );
   }
 }
