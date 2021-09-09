@@ -1,5 +1,22 @@
+<p>
+  <!-- #docregion toolbar-simple -->
+    <mat-toolbar color="primary">
+      <span>Application for Angular Material and NgRX</span>
+    </mat-toolbar>
+  <!-- #enddocregion toolbar-simple -->
+</p>
 
-<!-- Toolbar -->
+<nav mat-tab-nav-bar>
+  <a mat-tab-link
+  *ngFor="let link of navLinks"
+  [routerLink]="link.link"
+  routerLinkActive #rla="routerLinkActive"
+  [active]="rla.isActive">{{link.label}}
+  </a>
+</nav>
+<router-outlet></router-outlet>
+
+<h1>demo</h1>
 <ul>
   <li *ngFor="let item of postList$ | async">
     <h1>{{item.title}}</h1>
