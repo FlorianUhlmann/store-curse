@@ -13,8 +13,8 @@ export class PostEffects {
     return this.actions$.pipe(
         ofType(FeatureActions.loadPosts),
         switchMap(() => this.postHttpSerivce.getPost().pipe(
-          map((data:Post[]) => FeatureActions.setPosts( {posts: data}) ),
-          catchError(() => of(FeatureActions.setPostsError())))
+          map((data:Post[]) => FeatureActions.setPosts( {posts: data}) )
+        )
         ))
         });
 

@@ -1,0 +1,24 @@
+p {
+  font-family: Lato;
+}
+
+.mat-card-content{
+  min-height: 150px ;
+  padding: 10px 0px 10px 0px
+}
+
+
+.mat-card-subtitle-custom{
+  height: 2em ;
+}
+
+.card-custom{
+  padding: 20px;
+  border: 2px black solid;
+  background-color: aliceblue;
+
+}
+
+:host{
+  width: 100%;
+}

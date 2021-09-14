@@ -1,4 +1,4 @@
-import { ActionReducerMap } from '@ngrx/store';
+import { ActionReducerMap, State } from '@ngrx/store';
 import * as fromPost from './post/post.reducer';
 
 export interface AppState {

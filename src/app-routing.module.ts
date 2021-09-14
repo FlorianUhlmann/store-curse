@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { PostComponent } from './post/post.component';
-import { AlbumsComponent } from './albums/albums.component';
+import { PostComponent } from './app/post/post.component';
+import { AlbumsComponent } from './app/albums/albums.component';
 
 
 const routes: Routes = [

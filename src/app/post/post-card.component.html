@@ -1,0 +1,26 @@
+<mat-card  class="card-custom">
+  <mat-card-title>
+    <h2>
+      UserId {{data.userId}}
+    </h2>
+  </mat-card-title>
+<mat-card-subtitle class="mat-card-subtitle-custom">{{data.title}}</mat-card-subtitle>
+<mat-divider></mat-divider>
+<mat-list>
+  <h3 class="matSubheader">Generic Header</h3>
+  <mat-list-item>
+    <h4 class="matLine">Entry ID: {{data.id}} </h4>
+  </mat-list-item>
+  <mat-divider inset="true"></mat-divider>
+  <mat-card-content class="mat-card-content" >
+    <p>
+    {{data.body}}
+    </p>
+  </mat-card-content>
+</mat-list>
+<mat-divider></mat-divider>
+<mat-card-actions>
+  <button mat-button color="primary" class="text-upper">Edit</button>
+  <button mat-button color="primary" class="text-upper" (click)="deletePost(data.id)">Delete</button>
+</mat-card-actions>
+</mat-card>

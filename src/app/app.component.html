@@ -2,6 +2,7 @@
   <!-- #docregion toolbar-simple -->
     <mat-toolbar color="primary">
       <span>Application for Angular Material and NgRX</span>
+      <a mat-flat-button href="javascript:void(0)">Home</a>
     </mat-toolbar>
   <!-- #enddocregion toolbar-simple -->
 </p>
@@ -14,12 +15,8 @@
   [active]="rla.isActive">{{link.label}}
   </a>
 </nav>
+
 <router-outlet></router-outlet>
 
-<h1>demo</h1>
-<ul>
-  <li *ngFor="let item of postList$ | async">
-    <h1>{{item.title}}</h1>
-    <p>{{item.body}}</p>
-  </li>
-</ul>
+
+

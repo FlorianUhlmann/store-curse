@@ -1,0 +1,17 @@
+<h1>Posts</h1>
+
+
+
+<div nxLayout="grid" >
+  <div nxRow >
+    <div nxCol="12, 12, 4, 3,3, 2" *ngFor="let data of postList$ | async ">
+      <app-post-card [data]="data"></app-post-card>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<button (click)="addPost()" mat-raised-button color="primary" style="margin: 10px 0px 0px 30px">Add post to store</button>
+<button (click)="deleteAllPost()" mat-raised-button color="warning" style="margin: 10px 0px 0px 30px">delete all Posts</button>
+
