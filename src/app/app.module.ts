@@ -25,6 +25,9 @@ import { MatMenuModule } from '@angular/material/menu';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NxExpertModule } from '@aposin/ng-aquila/config';
 import { AlbumsModule } from './albums/albums.module';
+import { AlbumResolver } from './store/album/album.resolver';
+import { albumReducer } from './store/album/album.reducer';
+import { AlbumEffects } from './store/album/album.effect';
 @NgModule({
   declarations: [AppComponent ],
   imports: [
@@ -34,6 +37,7 @@ import { AlbumsModule } from './albums/albums.module';
     PostModule,
     AlbumsModule,
     StoreModule.forRoot(reducers),
+    EffectsModule.forRoot([AlbumEffects]),
     StoreDevtoolsModule.instrument({
       maxAge: 25,
       logOnly: environment.production,
@@ -52,7 +56,7 @@ import { AlbumsModule } from './albums/albums.module';
     FlexLayoutModule,
     NxExpertModule
   ],
-  providers: [],
+  providers: [AlbumResolver],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

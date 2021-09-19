@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { PostComponent } from './app/post/post.component';
 import { AlbumsComponent } from './app/albums/albums.component';
+import { AlbumResolver } from './app/store/album/album.resolver';
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/posts', pathMatch: 'full' },
   { path: 'posts', component:  PostComponent},
-  { path: 'albums', component: AlbumsComponent},
+  { path: 'albums', component: AlbumsComponent, resolve: {albums: AlbumResolver}
+},
 ];
 
 @NgModule({
