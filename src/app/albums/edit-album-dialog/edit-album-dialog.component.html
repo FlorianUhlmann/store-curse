@@ -1,0 +1,62 @@
+
+<h2 mat-dialog-title>{{dialogTitle}}</h2>
+
+<mat-dialog-content>
+
+  <ng-container *ngIf="form">
+
+    <div class="spinner-container" *ngIf="loading$ | async">
+
+      <mat-spinner></mat-spinner>
+
+    </div>
+
+    <ng-container [formGroup]="form">
+
+      <mat-form-field>
+
+        <input matInput
+               placeholder="User ID"
+               formControlName="userId"
+               [readonly]="disableRead">
+
+      </mat-form-field>
+
+      <mat-form-field>
+
+        <textarea matInput placeholder="Title"
+                  formControlName="title"
+                  [readonly]="disableRead">
+        </textarea>
+
+      </mat-form-field>
+
+    </ng-container>
+
+
+  </ng-container>
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+
+  <button mat-raised-button (click)="onClose()">
+    Close
+  </button>
+
+  <div *ngIf="mode === 'update'; else deleteAlbum">
+    <button mat-raised-button color="primary"
+      [disabled]="!form?.valid || (this.loading$ | async)"
+      (click)="onSave()">
+        Save
+    </button>
+  </div>
+
+  <ng-template #deleteAlbum>
+    <button mat-raised-button color="warn"
+      (click)="onDelete()">
+        Delete
+    </button>
+  </ng-template>
+</mat-dialog-actions>
+

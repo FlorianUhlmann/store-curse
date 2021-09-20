@@ -4,6 +4,8 @@ import { AlbumsComponent } from './albums.component';
 import { AlbumCardComponent } from './album-card/album-card/album-card.component';
 import { MaterialModule } from '../material-module';
 import { AlbumsTableHttpComponent } from './albums-table-http/albums-table-http/albums-table-http.component';
+import { EditAlbumDialogComponent } from './edit-album-dialog/edit-album-dialog.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -11,11 +13,13 @@ import { AlbumsTableHttpComponent } from './albums-table-http/albums-table-http/
   declarations: [
     AlbumsComponent,
     AlbumCardComponent,
-    AlbumsTableHttpComponent
+    AlbumsTableHttpComponent,
+    EditAlbumDialogComponent
   ],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ],
   exports: [
     AlbumsComponent

@@ -33,9 +33,14 @@
     <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary" (click)="getRecord(element.title)">Get Details</button> </td>
   </ng-container>
 
-  <ng-container matColumnDef="editdetail">
+  <ng-container matColumnDef="editalbum">
     <th mat-header-cell *matHeaderCellDef> Edit </th>
-    <td mat-cell *matCellDef="let element"> <button mat-mini-fab  (click)="updateRecord(element)">edit</button> </td>
+    <td mat-cell *matCellDef="let element"> <button mat-mini-fab  (click)="editAlbum(element)">edit</button> </td>
+  </ng-container>
+
+  <ng-container matColumnDef="deletealbum">
+    <th mat-header-cell *matHeaderCellDef> Delete </th>
+    <td mat-cell *matCellDef="let element"> <button mat-mini-fab color="warn"  (click)="deleteAlbum(element)"><mat-icon>delete_outline</mat-icon></button> </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

@@ -1,3 +1,4 @@
+import { state } from "@angular/animations";
 import { createEntityAdapter, EntityState } from "@ngrx/entity";
 import { createReducer, on } from "@ngrx/store";
 import { Album } from "src/app/models/album";
@@ -18,6 +19,12 @@ export const albumReducer = createReducer(
   albumInitialState,
   on(AlbumActions.setAlbums, (state, { albums} ) => albumAdapter.setAll(
     albums, state)
+  ),
+  on(AlbumActions.updateAlbum, (state, {update}) => albumAdapter.updateOne(
+    update, state)
+  ),
+  on(AlbumActions.deleteAlbum, (state, { id }) => albumAdapter.removeOne(
+    id, state)
   )
 )
 
