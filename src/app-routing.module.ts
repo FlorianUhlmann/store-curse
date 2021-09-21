@@ -4,13 +4,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { PostComponent } from './app/post/post.component';
 import { AlbumsComponent } from './app/albums/albums.component';
 import { AlbumResolver } from './app/store/album/album.resolver';
+import { ChartsComponent } from './app/charts/charts/charts.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/posts', pathMatch: 'full' },
-  { path: 'posts', component:  PostComponent},
-  { path: 'albums', component: AlbumsComponent, resolve: {albums: AlbumResolver}
-},
+  { path: 'posts' , component:  PostComponent},
+  { path: 'albums', component:  AlbumsComponent, resolve: {albums: AlbumResolver}},
+  { path: 'charts', component:  ChartsComponent},
+  { path: ''      , redirectTo: '/posts', pathMatch: 'full' },
+
 ];
 
 @NgModule({

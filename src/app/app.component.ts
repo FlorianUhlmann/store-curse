@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
       link: './albums',
     }, {
       label: 'Third',
-      link: './posts',
+      link: './charts',
   },
 ];
   background = '';

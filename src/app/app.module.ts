@@ -28,6 +28,7 @@ import { AlbumsModule } from './albums/albums.module';
 import { AlbumResolver } from './store/album/album.resolver';
 import { albumReducer } from './store/album/album.reducer';
 import { AlbumEffects } from './store/album/album.effect';
+import { ChartsModule } from './charts/charts/charts.module';
 @NgModule({
   declarations: [AppComponent ],
   imports: [
@@ -36,6 +37,7 @@ import { AlbumEffects } from './store/album/album.effect';
     MaterialModule,
     PostModule,
     AlbumsModule,
+    ChartsModule,
     StoreModule.forRoot(reducers),
     EffectsModule.forRoot([AlbumEffects]),
     StoreDevtoolsModule.instrument({
