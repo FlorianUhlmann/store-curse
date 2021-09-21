@@ -11,7 +11,7 @@ import { reducers } from './store/app.store';
 import { PostEffects } from './store/post/post.effect';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material-module';
-import { AppRoutingModule } from '../app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { PostModule } from './post/post.module';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -28,7 +28,7 @@ import { AlbumsModule } from './albums/albums.module';
 import { AlbumResolver } from './store/album/album.resolver';
 import { albumReducer } from './store/album/album.reducer';
 import { AlbumEffects } from './store/album/album.effect';
-import { ChartsModule } from './charts/charts/charts.module';
+import { ChartsModule } from './charts/charts.module';
 @NgModule({
   declarations: [AppComponent ],
   imports: [

@@ -6,7 +6,15 @@ import { MaterialModule } from '../material-module';
 import { AlbumsTableHttpComponent } from './albums-table-http/albums-table-http/albums-table-http.component';
 import { EditAlbumDialogComponent } from './edit-album-dialog/edit-album-dialog.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { Routes, RouterModule } from '@angular/router';
 
+
+const routes: Routes = [
+  {
+    path: '',
+    component: AlbumsComponent
+  }
+];
 
 
 @NgModule({
@@ -19,7 +27,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule.forChild(routes)
   ],
   exports: [
     AlbumsComponent

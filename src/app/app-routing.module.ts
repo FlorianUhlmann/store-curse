@@ -1,16 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { PostComponent } from './app/post/post.component';
-import { AlbumsComponent } from './app/albums/albums.component';
-import { AlbumResolver } from './app/store/album/album.resolver';
-import { ChartsComponent } from './app/charts/charts/charts.component';
+import { PostComponent } from './post/post.component';
+import { AlbumsComponent } from './albums/albums.component';
+import { AlbumResolver } from './store/album/album.resolver';
 
 
 const routes: Routes = [
   { path: 'posts' , component:  PostComponent},
-  { path: 'albums', component:  AlbumsComponent, resolve: {albums: AlbumResolver}},
-  { path: 'charts', component:  ChartsComponent},
+  { path: 'albums',
+   loadChildren: () => import('./albums/albums.module').then(m => m.AlbumsModule)
+  },
+  { path: 'charts',
+    loadChildren: () => import('./charts/charts.module').then(m => m.ChartsModule)
+  },
   { path: ''      , redirectTo: '/posts', pathMatch: 'full' },
 
 ];
