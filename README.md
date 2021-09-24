@@ -29,4 +29,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 API Access - For Chaarts
 https://www.alphavantage.co/support/#api-key
-ZNPAMC7T7ZHODG26
+ZNPAMC7T7ZHODG26 on florian.uhlmann1@gmail.com
+I3TP0RFNC1ABF9GH on ulliu3@hotmail.de

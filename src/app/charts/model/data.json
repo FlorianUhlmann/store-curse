@@ -1,0 +1,36 @@
+{"Meta Data": {
+   "1. Information": "Daily Prices and Volumes for Digital Currency",
+   "2. Digital Currency Code": "BTC",
+   "3. Digital Currency Name": "Bitcoin",
+   "4. Market Code": "CNY",
+   "5. Market Name": "Chinese Yuan",
+   "6. Last Refreshed": "2021-09-21 00:00:00",
+   "7. Time Zone": "UTC"
+  },
+   "Time Series (Digital Currency Daily)": {
+      "2021-09-21": {
+                      "1a. open (CNY)": "278162.80089600",
+                      "1b. open (USD)": "43016.64000000",
+                      "2a. high (CNY)": "278302.08715200",
+                      "2b. high (USD)": "43038.18000000",
+                      "3a. low (CNY)": "259949.28000000",
+                      "3b. low (USD)": "40200.00000000",
+                      "4a. close (CNY)": "269784.60973600",
+                      "4b. close (USD)": "41720.99000000",
+                      "5. volume": "11870.66469400",
+                      "6. market cap (USD)": "11870.66469400"
+                    },
+      "2021-09-20": {
+                      "1a. open (CNY)": "305484.05220000",
+                      "1b. open (USD)": "47241.75000000",
+                      "2a. high (CNY)": "306166.25740000",
+                      "2b. high (USD)": "47347.25000000",
+                      "3a. low (CNY)": "274822.00000000",
+                      "3b. low (USD)": "42500.00000000",
+                      "4a. close (CNY)": "278156.20516800",
+                      "4b. close (USD)": "43015.62000000",
+                      "5. volume": "78003.52444300",
+                      "6. market cap (USD)": "78003.52444300"
+                    }
+      }
+}

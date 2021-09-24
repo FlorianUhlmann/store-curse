@@ -7,15 +7,7 @@ import { AlbumsTableHttpComponent } from './albums-table-http/albums-table-http/
 import { EditAlbumDialogComponent } from './edit-album-dialog/edit-album-dialog.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
-
-
-const routes: Routes = [
-  {
-    path: '',
-    component: AlbumsComponent
-  }
-];
-
+import { AlbumsRoutingModule } from './albums-routing.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +20,7 @@ const routes: Routes = [
     CommonModule,
     MaterialModule,
     ReactiveFormsModule,
-    RouterModule.forChild(routes)
+    AlbumsRoutingModule
   ],
   exports: [
     AlbumsComponent
