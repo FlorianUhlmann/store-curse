@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { PostComponent } from './post/post.component';
-import { AlbumsComponent } from './albums/albums.component';
-import { AlbumResolver } from './store/album/album.resolver';
 
 
 const routes: Routes = [
-  { path: 'posts' , component:  PostComponent},
+  { path: 'posts' ,
+    loadChildren: () => import('./post/post.module').then(m => m.PostModule)
+  },
   { path: 'albums',
    loadChildren: () => import('./albums/albums.module').then(m => m.AlbumsModule)
   },

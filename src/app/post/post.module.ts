@@ -5,8 +5,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PostCardComponent } from './post-card.component';
 import { MaterialModule } from '../material-module';
+import { RouterModule, Routes } from '@angular/router';
 
-
+const routes : Routes = [
+  {
+    path: '', component: PostComponent
+  }
+]
 
 @NgModule({
   declarations: [
@@ -15,7 +20,8 @@ import { MaterialModule } from '../material-module';
   ],
   imports: [
     CommonModule,
-  MaterialModule],
+    RouterModule.forChild(routes),
+    MaterialModule],
   exports:[
     PostComponent
   ]
