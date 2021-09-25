@@ -4,48 +4,53 @@
   <mat-label>Filter</mat-label>
   <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
 </mat-form-field> -->
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<div class="album-table">
+  <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-  <!--- Note that these columns can be defined in any order.
-        The actual rendered columns are set as a property on the row definition" -->
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
 
-  <!-- ID Column -->
-  <ng-container matColumnDef="userId">
-    <th mat-header-cell *matHeaderCellDef> userID</th>
-    <td mat-cell *matCellDef="let element"> {{element.userId}} </td>
-  </ng-container>
+    <!-- ID Column -->
+    <ng-container matColumnDef="userId">
+      <mat-header-cell *matHeaderCellDef> userID</mat-header-cell>
+      <mat-cell *matCellDef="let element" data-label="userId"> {{element.userId}} </mat-cell>
+    </ng-container>
 
-  <!-- userID Column -->
-  <ng-container matColumnDef="id">
-    <th mat-header-cell *matHeaderCellDef> ID </th>
-    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-  </ng-container>
+    <!-- userID Column -->
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+      <mat-cell  *matCellDef="let element" data-label="id"> {{element.id}} </mat-cell>
+    </ng-container>
 
-  <!-- title Column -->
-  <ng-container matColumnDef="title">
-    <th mat-header-cell *matHeaderCellDef> Title </th>
-    <td mat-cell *matCellDef="let element"> {{element.title}} </td>
-  </ng-container>
-
-
-  <ng-container matColumnDef="getdetails">
-    <th mat-header-cell *matHeaderCellDef> Details </th>
-    <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary" (click)="getRecord(element.title)">Get Details</button> </td>
-  </ng-container>
-
-  <ng-container matColumnDef="editalbum">
-    <th mat-header-cell *matHeaderCellDef> Edit </th>
-    <td mat-cell *matCellDef="let element"> <button mat-mini-fab  (click)="editAlbum(element)">edit</button> </td>
-  </ng-container>
-
-  <ng-container matColumnDef="deletealbum">
-    <th mat-header-cell *matHeaderCellDef> Delete </th>
-    <td mat-cell *matCellDef="let element"> <button mat-mini-fab color="warn"  (click)="deleteAlbum(element)"><mat-icon>delete_outline</mat-icon></button> </td>
-  </ng-container>
-
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
+    <!-- title Column -->
+    <ng-container matColumnDef="title">
+      <mat-header-cell *matHeaderCellDef> Title </mat-header-cell>
+      <mat-cell  *matCellDef="let element" data-label="title"> {{element.title}} </mat-cell>
+    </ng-container>
 
 
-<mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+    <ng-container matColumnDef="getdetails">
+      <mat-header-cell *matHeaderCellDef> Details </mat-header-cell>
+      <mat-cell  *matCellDef="let element" data-label="getdetails"> <button mat-raised-button color="primary" (click)="getRecord(element.title)">Get Details</button> </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="editalbum">
+      <mat-header-cell *matHeaderCellDef> Edit </mat-header-cell>
+      <mat-cell  *matCellDef="let element" data-label="editalbum"> <button mat-mini-fab  (click)="editAlbum(element)">edit</button> </mat-cell>
+    </ng-container>
+
+
+    <ng-container matColumnDef="deletealbum">
+      <mat-header-cell *matHeaderCellDef> Delete </mat-header-cell>
+      <mat-cell  *matCellDef="let element" data-label="deletealbum"> <button mat-mini-fab color="warn"  (click)="deleteAlbum(element)"><mat-icon>delete_outline</mat-icon></button> </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+
+  <mat-paginator [pageSizeOptions]="[1, 2, 5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+
+
+</div>

@@ -1,3 +1,59 @@
 table{
   width: 100%;
 }
+
+.album-table{
+  align-content:center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+@media screen and (max-width: 960px) {
+
+
+  .mat-table {
+    border: 0;
+    width: 100%;
+    vertical-align: middle
+  }
+
+  .mat-table caption {
+    font-size: 1em;
+  }
+
+  .mat-table .mat-row {
+    border-bottom: 5px solid #ddd;
+    display: block;
+    width: 100%;
+  }
+
+  .mat-table .mat-cell {
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    font-size: 1em;
+    text-align: right;
+    font-weight: bold;
+    height: 48px;
+    padding: 18px 30px 20px 30px;
+  }
+  .mat-table .mat-cell:before {
+
+    content: attr(data-label);
+    float: left;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: .85em;
+  }
+
+  .mat-table .mat-cell > button{
+    margin-top: 0px;
+  }
+  .mat-table .mat-cell::after{
+    height: 100px;
+  }
+
+}
