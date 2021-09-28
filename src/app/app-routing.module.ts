@@ -13,8 +13,9 @@ const routes: Routes = [
   { path: 'charts',
     loadChildren: () => import('./charts/charts.module').then(m => m.ChartsModule)
   },
+  { path: 'employees',
+   loadChildren: () => import('./employees/employees.module').then(m => m.EmployeesModule) },
   { path: ''      , redirectTo: '/posts', pathMatch: 'full' },
-
 ];
 
 @NgModule({

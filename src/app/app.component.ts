@@ -23,6 +23,9 @@ export class AppComponent implements OnInit {
     }, {
       label: 'Third',
       link: './charts',
+  },{
+      label: 'Employees',
+      link: './employees',
   },
 ];
   background = '';

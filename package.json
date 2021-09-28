@@ -5,10 +5,14 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build sourcemap": "ng build --prod --source-map",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build:stats": "ng build --stats-json",
-    "analyze": "webpack-bundle-analyzer dist/store-curse/stats.json"
+    "analyze": "webpack-bundle-analyzer dist/store-curse/stats.json",
+    "source-map-explorer": "source-map-explorer dist/store-curse/main.*.js",
+    "bundle:report": "source-map-explorer dist/store-curse/**/*.js"
+
   },
   "private": true,
   "dependencies": {
@@ -50,6 +54,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "source-map-explorer": "^2.5.2",
     "typescript": "~4.3.5",
     "webpack-bundle-analyzer": "^4.4.2"
   }

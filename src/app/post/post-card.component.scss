@@ -2,9 +2,20 @@ p {
   font-family: Lato;
 }
 
+.hide-text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  hyphens: auto;
+}
+.three-line-clamp {
+  -webkit-line-clamp: 4;
+}
+
 .mat-card-content{
-  min-height: 150px ;
-  padding: 10px 0px 10px 0px
+  padding: 10px 0px 10px 0px;
+
 }
 
 
@@ -16,7 +27,7 @@ p {
   padding: 20px;
   border: 2px black solid;
   background-color: aliceblue;
-
+  margin-bottom: 5px;
 }
 
 :host{

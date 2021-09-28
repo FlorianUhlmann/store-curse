@@ -6,6 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PostCardComponent } from './post-card.component';
 import { MaterialModule } from '../material-module';
 import { RouterModule, Routes } from '@angular/router';
+import { StoreModule } from '@ngrx/store';
+import * as fromPost from '../store/post/post.reducer';
 
 const routes : Routes = [
   {
@@ -21,6 +23,9 @@ const routes : Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
+    StoreModule.forFeature(
+      fromPost.postFeatureKey, fromPost.reducer,
+    ),
     MaterialModule],
   exports:[
     PostComponent
